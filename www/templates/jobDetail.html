@@ -1,0 +1,39 @@
+<ion-view view-title="Job Detail">
+    <ion-content>
+        <div class="card  " on-swipe-left="swipeleftAction()">
+            <h1 class="item item-divider  item-positive"> {{job.jobTitle }} <br> {{job.employerName}} - {{job.locationName}}
+            </h1>
+            <ion-list>
+                <ion-item class="row">
+                    <div class="col-20">contractType</div>
+                    <div>{{job.contractType}}</div>
+                </ion-item>
+                <ion-item class="row">
+                    <div class="col-20">Salary</div>
+                    <div> {{job.salary}}</div>
+                </ion-item>
+                <ion-item class="row">
+                    <div class="col-20">datePosted</div>
+                    <div class="col-20">{{job.datePosted}}</div>
+
+                    <div class="col-20">expirationDate</div>
+                    <div class="col-20">{{job.expirationDate}}</div>
+                </ion-item>
+
+                <ion-item class="row">
+                    <div class="col-20">fullTime</div>
+                    <div>{{job.fullTime}}</div>
+                </ion-item>
+                <ion-item class="row">
+                    <div class="col-20">jobDescription</div>
+                    <div class="item item-text-wrap" ng-bind-html="job.jobDescription"></div>
+                </ion-item>
+
+
+            </ion-list>
+
+            <button class="button button-full button-positive" ng-click="save(job)">
+          Save Job
+        </button>
+        </div>
+</ion-view>

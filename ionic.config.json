@@ -1,0 +1,8 @@
+{
+    "name": "jobsearc",
+    "app_id": "",
+    "proxies": [{
+        "path": "/app",
+        "proxyUrl": "http://localhost:8100/#/app"
+    }]
+}

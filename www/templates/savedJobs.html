@@ -1,0 +1,23 @@
+<ion-view view-title="Search Results">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div ng-repeat="job in jobs">
+
+            <div class="card " ng-click="changePage({{job.jobId}})">
+                <div class="item item-divider ">
+                    {{job.jobTitle}}<br> {{job.employerName}} - {{job.locationName}}
+
+                </div>
+                <div class="item item-text-wrap " ng-bind-html="job.jobDescription">
+
+                </div>
+                <div class="item item-divider ">
+                    {{job.minimumSalary}} - {{job.maximumSalary}} {{job.currency}}
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
